@@ -1,12 +1,18 @@
-
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
-  const payload = await req.json();
+  try {
+    const payload = await req.json();
 
-  if (payload?.data?.status === "paid") {
-    console.log("Pagamento confirmado:", payload.data.id);
+    console.log("Webhook recebido:", payload?.data?.id, payload?.data?.status);
+
+    if (payload?.data?.status === "paid") {
+      // Pagamento confirmado
+    }
+
+    return NextResponse.json({ received: true });
+  } catch (err) {
+    console.error("Erro no webhook:", err);
+    return NextResponse.json({ error: "Webhook error" }, { status: 500 });
   }
-
-  return NextResponse.json({ received: true });
 }
