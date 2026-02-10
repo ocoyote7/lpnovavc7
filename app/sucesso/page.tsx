@@ -233,6 +233,30 @@ function SuccessContent() {
     validateToken()
   }, [token])
 
+  // Disparar Purchase uma única vez quando o pagamento estiver aprovado
+  useEffect(() => {
+    const approvedStatuses = ["aprovado", "approved", "paid", "pago", "completed", "success"]
+    const isApproved = approvedStatuses.includes((paymentStatus || "").toLowerCase())
+    if (!paymentVerified || !isApproved) return
+
+    try {
+      const key = `meta_purchase_${transactionId}`
+      if (typeof window !== "undefined" && sessionStorage.getItem(key)) return
+
+      if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
+        ;(window as any).fbq("track", "Purchase", {
+          value: Number.isFinite(amount) ? amount : 0,
+          currency: "BRL",
+        })
+      }
+
+      if (typeof window !== "undefined") sessionStorage.setItem(key, "1")
+    } catch {
+      // silencioso
+    }
+  }, [paymentVerified, paymentStatus, transactionId, amount])
+
+
 // Polling do status de pagamento (card pode ficar "pending"/"processing")
 useEffect(() => {
   if (!token || tokenValid !== true) return
