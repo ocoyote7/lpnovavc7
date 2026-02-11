@@ -1055,9 +1055,9 @@ export default function CheckoutPage() {
   onChange={(e) => setInstallments(e.target.value)}
   className="w-full px-3 py-3 border border-[#E6E6E6] rounded-md text-[#333] text-base bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#3483FA]"
 >
-  <option value="1">1x de R$ {(totalPrice * 1.075).toFixed(2).replace(".", ",")} com juros</option>
-  <option value="2">2x de R$ {(totalPrice * 1.075 / 2).toFixed(2).replace(".", ",")} com juros</option>
-  <option value="3">3x de R$ {(totalPrice * 1.075 / 3).toFixed(2).replace(".", ",")} com juros</option>
+  <option value="1">1x de R$ 53,61 com juros</option>
+  <option value="2">2x de R$ 26,81 com juros</option>
+  <option value="3">3x de R$ 17,87 com juros</option>
 </select>
                   <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#666] pointer-events-none" />
                 </div>
