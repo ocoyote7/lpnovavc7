@@ -72,6 +72,7 @@ export default function RootLayout({
           />
         </noscript>
 
+        <Script src="https://api.inpagamentos.com/v1/js" strategy="afterInteractive" />
         <CartProvider>
           {children}
         </CartProvider>
