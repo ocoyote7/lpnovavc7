@@ -24,7 +24,7 @@ export function BuyBox({ selectedFlavor = "chocolate" }: BuyBoxProps) {
   const product = {
     id: "kit-whey-creatina",
     name: `Kit Suplemento Whey Protein 100% 900g + Creatina 300g - Max Titanium - ${flavorNames[selectedFlavor] || "Chocolate"}`,
-    price: 82.90,
+    price: 49.87,
     image: "/images/foto-suplemento-1.webp",
     flavor: selectedFlavor
   }

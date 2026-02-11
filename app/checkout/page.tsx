@@ -248,11 +248,11 @@ export default function CheckoutPage() {
   // Upsell - Power Protein Bar (8 unidades)
   const [showUpsell, setShowUpsell] = useState(true)
   const [upsellAdded, setUpsellAdded] = useState(false)
-  const upsellPrice = 32.77 // Power Protein Bar (8un) - preco promocional
+  const upsellPrice = 17.99 // Power Protein Bar (8un) - preco promocional
   const upsellOriginalPrice = 61.99 // Power Protein Bar (8un) - preco original
   
   // Pricing
-  const basePrice = 82.90
+  const basePrice = 49.87
   const totalPrice = basePrice + (upsellAdded ? upsellPrice : 0)
   
   // Track if PIX was already generated for current amount
