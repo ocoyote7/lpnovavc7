@@ -55,7 +55,7 @@ export function BuyBox({ selectedFlavor = "chocolate" }: BuyBoxProps) {
           <span className="text-base text-[#333]">,87</span>
         </div>
         <p className="text-sm text-[#333]">
-          {[1,2,3,4].map(i => { const total = (product.price * (1 + 0.075)); const parcela = (total / i).toFixed(2).replace(".", ","); return i === 1 ? `1x de R$ ${parcela} sem juros` : `${i}x de R$ ${parcela} com juros` })[3]}
+          {[1,2,3].map(i => { const total = (product.price * 1.075); const parcela = (total / i).toFixed(2).replace(".", ","); return i === 1 ? `1x de R$ ${parcela} sem juros` : `${i}x de R$ ${parcela} com juros` })[2]}
         </p>
         <button className="text-sm text-[#3483FA] flex items-center gap-1 mt-1">
           Ver os meios de pagamento

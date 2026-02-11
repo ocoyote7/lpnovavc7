@@ -763,7 +763,7 @@ export default function CheckoutPage() {
           <CreditCard className="w-6 h-6 text-[#3483FA]" />
           <div className="flex-1 text-left">
             <p className="text-sm font-medium text-[#333]">Cartao de credito</p>
-            <p className="text-xs text-[#666]">Em ate 4x</p>
+            <p className="text-xs text-[#666]">Em ate 3x</p>
           </div>
         </button>
       </div>
