@@ -1058,8 +1058,6 @@ export default function CheckoutPage() {
                     <option value="1">1x de R$ {totalPrice.toFixed(2).replace(".", ",")} sem juros</option>
                     <option value="2">2x de R$ {(totalPrice / 2).toFixed(2).replace(".", ",")} sem juros</option>
                     <option value="3">3x de R$ {(totalPrice / 3).toFixed(2).replace(".", ",")} sem juros</option>
-                    <option value="6">6x de R$ {(totalPrice / 6).toFixed(2).replace(".", ",")} sem juros</option>
-                    <option value="12">4x de R$ {((totalPrice * 1.15) / 12).toFixed(2).replace(".", ",")}</option>
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#666] pointer-events-none" />
                 </div>
