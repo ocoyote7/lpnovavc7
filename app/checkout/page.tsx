@@ -248,11 +248,11 @@ export default function CheckoutPage() {
   // Upsell - Power Protein Bar (8 unidades)
   const [showUpsell, setShowUpsell] = useState(true)
   const [upsellAdded, setUpsellAdded] = useState(false)
-  const upsellPrice = 17.99 // Power Protein Bar (8un) - preco promocional
+  const upsellPrice = 32.77 // Power Protein Bar (8un) - preco promocional
   const upsellOriginalPrice = 61.99 // Power Protein Bar (8un) - preco original
   
   // Pricing
-  const basePrice = 49.87
+  const basePrice = 82.90
   const totalPrice = basePrice + (upsellAdded ? upsellPrice : 0)
   
   // Track if PIX was already generated for current amount
@@ -647,7 +647,7 @@ export default function CheckoutPage() {
               <div className="flex items-center gap-2">
                 <span className="text-xs text-[#999] line-through">R$ {upsellOriginalPrice.toFixed(2).replace(".", ",")}</span>
                 <span className="text-sm text-[#00A650] font-bold">R$ {upsellPrice.toFixed(2).replace(".", ",")}</span>
-                <span className="bg-[#00A650] text-white text-[10px] px-1 py-0.5 rounded">71% OFF</span>
+                <span className="bg-[#00A650] text-white text-[10px] px-1 py-0.5 rounded">47% OFF</span>
               </div>
             </div>
             <button
@@ -688,7 +688,7 @@ export default function CheckoutPage() {
             <p className="text-xs text-[#666]">Qtd: 1</p>
           </div>
           <div className="text-right">
-            <p className="text-base font-semibold text-[#333]">R$ 49,87</p>
+            <p className="text-base font-semibold text-[#333]">R$ 82,90</p>
             <p className="text-xs text-[#00A650]">Frete gratis</p>
           </div>
         </div>
@@ -763,7 +763,7 @@ export default function CheckoutPage() {
           <CreditCard className="w-6 h-6 text-[#3483FA]" />
           <div className="flex-1 text-left">
             <p className="text-sm font-medium text-[#333]">Cartao de credito</p>
-            <p className="text-xs text-[#666]">Em ate 3x</p>
+            <p className="text-xs text-[#666]">Em ate 12x</p>
           </div>
         </button>
       </div>

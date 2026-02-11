@@ -158,15 +158,15 @@ function SuccessContent() {
   // Ler dados da URL
   const transactionId = searchParams.get("id") || `${Date.now().toString().slice(-8)}`
   const paymentMethod = searchParams.get("method") || "pix"
-  const amount = Number.parseFloat(searchParams.get("amount") || "49.87")
+  const amount = Number.parseFloat(searchParams.get("amount") || "82.90")
   const token = searchParams.get("token")
   const hasUpsell = amount > 83 // se o total e maior que o preco base, tem upsell
   
   // Calcular economia real baseado nos precos originais vs promocionais
-  // Kit Whey 900g + Creatina 300g: original R$ 179,90 -> promo R$ 49,87 = economia R$ 97,00
-  const baseSavings = 179.90 - 49.87 // R$ 97,00
-  // Power Protein Bar (8un): original R$ 61,99 -> promo R$ 17,99 = economia R$ 29,22
-  const upsellSavings = hasUpsell ? (61.99 - 17.99) : 0 // R$ 29,22
+  // Kit Whey 900g + Creatina 300g: original R$ 179,90 -> promo R$ 82,90 = economia R$ 97,00
+  const baseSavings = 179.90 - 82.90 // R$ 97,00
+  // Power Protein Bar (8un): original R$ 61,99 -> promo R$ 32,77 = economia R$ 29,22
+  const upsellSavings = hasUpsell ? (61.99 - 32.77) : 0 // R$ 29,22
   const totalSavings = (baseSavings + upsellSavings).toFixed(2).replace(".", ",")
   
   // Calcular datas de entrega - 14 dias maximo a partir da compra, mas pode chegar em 7
@@ -554,12 +554,12 @@ if (tokenValid === true && !paymentVerified) {
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
               <span className="text-[#666]">Kit Whey 900g + Creatina 300g</span>
-              <span className="text-[#333]">R$ 49,87</span>
+              <span className="text-[#333]">R$ 82,90</span>
             </div>
             {hasUpsell && (
               <div className="flex justify-between text-sm">
                 <span className="text-[#666]">Power Protein Bar (8un)</span>
-                <span className="text-[#333]">R$ {(amount - 49.87).toFixed(2).replace(".", ",")}</span>
+                <span className="text-[#333]">R$ {(amount - 82.90).toFixed(2).replace(".", ",")}</span>
               </div>
             )}
             <div className="flex justify-between text-sm">

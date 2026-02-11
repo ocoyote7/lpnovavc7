@@ -24,7 +24,7 @@ export function BuyBox({ selectedFlavor = "chocolate" }: BuyBoxProps) {
   const product = {
     id: "kit-whey-creatina",
     name: `Kit Suplemento Whey Protein 100% 900g + Creatina 300g - Max Titanium - ${flavorNames[selectedFlavor] || "Chocolate"}`,
-    price: 49.87,
+    price: 82.90,
     image: "/images/foto-suplemento-1.webp",
     flavor: selectedFlavor
   }
@@ -47,15 +47,15 @@ export function BuyBox({ selectedFlavor = "chocolate" }: BuyBoxProps) {
         <div className="flex items-center gap-2">
           <span className="text-xs text-[#999] line-through">R$ 179,90</span>
           <span className="bg-[#00A650] text-white text-[10px] font-semibold px-1 py-0.5 rounded">
-            72% OFF
+            54% OFF
           </span>
         </div>
         <div className="flex items-baseline gap-1">
-          <span className="text-3xl font-light text-[#333]">R$ 49</span>
-          <span className="text-base text-[#333]">,87</span>
+          <span className="text-3xl font-light text-[#333]">R$ 82</span>
+          <span className="text-base text-[#333]">,90</span>
         </div>
         <p className="text-sm text-[#333]">
-          {[1,2,3].map(i => { const total = (product.price * 1.075); const parcela = (total / i).toFixed(2).replace(".", ","); return i === 1 ? `1x de R$ ${parcela} sem juros` : `${i}x de R$ ${parcela} com juros` })[2]}
+          em <span className="text-[#3483FA]">12x R$ 7,99</span>
         </p>
         <button className="text-sm text-[#3483FA] flex items-center gap-1 mt-1">
           Ver os meios de pagamento
