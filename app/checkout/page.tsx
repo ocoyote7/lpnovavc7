@@ -647,7 +647,7 @@ export default function CheckoutPage() {
               <div className="flex items-center gap-2">
                 <span className="text-xs text-[#999] line-through">R$ {upsellOriginalPrice.toFixed(2).replace(".", ",")}</span>
                 <span className="text-sm text-[#00A650] font-bold">R$ {upsellPrice.toFixed(2).replace(".", ",")}</span>
-                <span className="bg-[#00A650] text-white text-[10px] px-1 py-0.5 rounded">47% OFF</span>
+                <span className="bg-[#00A650] text-white text-[10px] px-1 py-0.5 rounded">71% OFF</span>
               </div>
             </div>
             <button
@@ -688,7 +688,7 @@ export default function CheckoutPage() {
             <p className="text-xs text-[#666]">Qtd: 1</p>
           </div>
           <div className="text-right">
-            <p className="text-base font-semibold text-[#333]">R$ 82,90</p>
+            <p className="text-base font-semibold text-[#333]">R$ 49,87</p>
             <p className="text-xs text-[#00A650]">Frete gratis</p>
           </div>
         </div>
@@ -763,7 +763,7 @@ export default function CheckoutPage() {
           <CreditCard className="w-6 h-6 text-[#3483FA]" />
           <div className="flex-1 text-left">
             <p className="text-sm font-medium text-[#333]">Cartao de credito</p>
-            <p className="text-xs text-[#666]">Em ate 12x</p>
+            <p className="text-xs text-[#666]">Em ate 4x</p>
           </div>
         </button>
       </div>
@@ -1059,7 +1059,7 @@ export default function CheckoutPage() {
                     <option value="2">2x de R$ {(totalPrice / 2).toFixed(2).replace(".", ",")} sem juros</option>
                     <option value="3">3x de R$ {(totalPrice / 3).toFixed(2).replace(".", ",")} sem juros</option>
                     <option value="6">6x de R$ {(totalPrice / 6).toFixed(2).replace(".", ",")} sem juros</option>
-                    <option value="12">12x de R$ {((totalPrice * 1.15) / 12).toFixed(2).replace(".", ",")}</option>
+                    <option value="12">4x de R$ {((totalPrice * 1.15) / 12).toFixed(2).replace(".", ",")}</option>
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#666] pointer-events-none" />
                 </div>

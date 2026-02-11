@@ -47,7 +47,7 @@ export function BuyBox({ selectedFlavor = "chocolate" }: BuyBoxProps) {
         <div className="flex items-center gap-2">
           <span className="text-xs text-[#999] line-through">R$ 179,90</span>
           <span className="bg-[#00A650] text-white text-[10px] font-semibold px-1 py-0.5 rounded">
-            54% OFF
+            72% OFF
           </span>
         </div>
         <div className="flex items-baseline gap-1">
@@ -55,7 +55,7 @@ export function BuyBox({ selectedFlavor = "chocolate" }: BuyBoxProps) {
           <span className="text-base text-[#333]">,90</span>
         </div>
         <p className="text-sm text-[#333]">
-          em <span className="text-[#3483FA]">12x R$ 7,99</span>
+          em <span className="text-[#3483FA]">4x de R$ 13,42 com juros</span>
         </p>
         <button className="text-sm text-[#3483FA] flex items-center gap-1 mt-1">
           Ver os meios de pagamento

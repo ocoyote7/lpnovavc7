@@ -5,15 +5,21 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
-    const auth = Buffer.from(
+    const installments = Math.min(body.installments || 1, 4);
+const interestRate = 0.075;
+const totalAmount = installments > 1
+  ? Math.round(body.amount * (1 + interestRate))
+  : body.amount;
+
+const auth = Buffer.from(
       `${process.env.INPAGAMENTOS_PUBLIC_KEY}:${process.env.INPAGAMENTOS_SECRET_KEY}`
     ).toString("base64");
 
     const payload = {
-      amount: body.amount,
+      amount: totalAmount,
       paymentMethod: "credit_card",
       cardToken: body.token,
-      installments: body.installments || 1,
+      installments: Math.min(body.installments || 1, 4),
       customer: {
         name: body.customer.name,
         email: body.customer.email,

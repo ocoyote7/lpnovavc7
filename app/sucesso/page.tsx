@@ -163,9 +163,9 @@ function SuccessContent() {
   const hasUpsell = amount > 83 // se o total e maior que o preco base, tem upsell
   
   // Calcular economia real baseado nos precos originais vs promocionais
-  // Kit Whey 900g + Creatina 300g: original R$ 179,90 -> promo R$ 82,90 = economia R$ 97,00
+  // Kit Whey 900g + Creatina 300g: original R$ 179,90 -> promo R$ 49,87 = economia R$ 97,00
   const baseSavings = 179.90 - 82.90 // R$ 97,00
-  // Power Protein Bar (8un): original R$ 61,99 -> promo R$ 32,77 = economia R$ 29,22
+  // Power Protein Bar (8un): original R$ 61,99 -> promo R$ 17,99 = economia R$ 29,22
   const upsellSavings = hasUpsell ? (61.99 - 32.77) : 0 // R$ 29,22
   const totalSavings = (baseSavings + upsellSavings).toFixed(2).replace(".", ",")
   
@@ -554,7 +554,7 @@ if (tokenValid === true && !paymentVerified) {
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
               <span className="text-[#666]">Kit Whey 900g + Creatina 300g</span>
-              <span className="text-[#333]">R$ 82,90</span>
+              <span className="text-[#333]">R$ 49,87</span>
             </div>
             {hasUpsell && (
               <div className="flex justify-between text-sm">
